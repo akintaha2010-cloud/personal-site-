@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+FoundDesk
+{% endblock %}
+
+{% block content %}
+
+<h1>Campus Lost and Found</h1>
+
+<p>Report a lost or found item here.</p>
+
+<form action="/add_user" method="POST">
+
+    <label>Item Name</label>
+
+    <input
+        name="item_name"
+        type="text"
+        required
+    >
+
+    <label>Location</label>
+
+    <input
+        name="location"
+        type="text"
+        required
+    >
+
+    <button type="submit">
+        Add Item
+    </button>
+
+</form>
+
+<h2>Reported Items</h2>
+
+{% for item in items %}
+
+<div>
+
+    <p>
+        <strong>Item:</strong>
+        {{ item[1] }}
+    </p>
+
+    <p>
+        <strong>Location:</strong>
+        {{ item[2] }}
+    </p>
+
+    <a href="/update_user/{{ item[0] }}">
+        Update
+    </a>
+
+    <a href="/delete_user/{{ item[0] }}">
+        Delete
+    </a>
+
+</div>
+
+<hr>
+
+{% else %}
+
+<p>No items reported yet.</p>
+
+{% endfor %}
+
+{% endblock %}
