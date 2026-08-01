@@ -34,3 +34,7 @@ python main.py
 - HTML and CSS
 
 Made for students who want an easier way to find lost items.
+
+## AI Assistance
+
+AI was used as a coding assistant during development. It helped explain the use of Flask, SQLite, and HTML concepts. It is also used to generate ideas for new features. All AI recommendations were reviewed and tested before being added to the project.

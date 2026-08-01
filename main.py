@@ -188,14 +188,16 @@ if __name__ == "__main__":
     )
 
     flask_thread.start()
-
+  
     time.sleep(1)
 
     webview.create_window(
-        "FoundDesk",
+        "FoundDesk", 
         "http://127.0.0.1:5000/register",
         width=1000,
-        height=700
-    )  
-    
-    webview.start()
+        height=700 
+    )                         
+                                            
+    webview.start()       
+
+                 
