@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Listings
+{% endblock %}
+
+{% block content %}
+
+<h1>My Listings</h1>
+
+<p>
+    Logged in as:
+    <strong>
+        {{ session.get("full_name") }}
+    </strong>
+</p>
+
+<a href="/">
+    Back to Home
+</a>
+
+|
+
+<a href="/logout">
+    Logout
+</a>
+
+<hr>
+
+{% for item in items %}
+
+<div>
+
+    <p>
+        <strong>Type:</strong>
+        {{ item[1] }}
+    </p>
+
+    <p>
+        <strong>Item:</strong>
+        {{ item[2] }}
+    </p>
+
+    <p>
+        <strong>Location:</strong>
+        {{ item[3] }}
+    </p>
+
+    <p>
+        <strong>Category:</strong>
+        {{ item[4] or "Not specified" }}
+    </p>
+
+    <p>
+        <strong>Description:</strong>
+        {{ item[5] or "No description" }}
+    </p>
+
+    <a href="/delete_user/{{ item[0] }}">
+        Delete
+    </a>
+
+</div>
+
+<hr>
+
+{% else %}
+
+<p>
+    You have not posted any items yet.
+</p>
+
+{% endfor %}
+
+{% endblock %}

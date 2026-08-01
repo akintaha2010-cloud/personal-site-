@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the online Lost and Found system of Akın University</h1>
+
+<h2>If you want to report a lost or found item, please create an account or login to your existing account:</h2>
+
+<h1>Create Account</h1>
+
+<form action="/register" method="POST">
+
+    <label>Full Name</label>
+    <input
+        type="text"
+        name="full_name"
+        placeholder="Your full name"
+        required
+    >
+
+    <br><br>
+
+    <label>Email</label>
+    <input
+        type="email"
+        name="email"
+        placeholder="example@email.com"
+        required
+    >
+
+    <br><br>
+
+    <label>Password</label>
+    <input
+        type="password"
+        name="password"
+        placeholder="Create a password"
+        required
+    >
+
+    <br><br>
+
+    <button type="submit">
+        Register
+    </button>
+
+</form>
+
+<p>
+    Already have an account?
+    <a href="/login">Login</a>
+</p>
+ 
+{% endblock %}
