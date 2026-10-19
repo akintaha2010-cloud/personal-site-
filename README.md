@@ -17,7 +17,7 @@ Users can:
 Install the required packages:
 
 ```bash
-python -m pip install flask pywebview
+python -m pip install -r requirements.txt
 ```
 
 Then run:
