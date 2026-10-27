@@ -1,3 +1,5 @@
+import os
+
 from match import calculate_match_score
 from flask import (
     Flask,
@@ -21,7 +23,10 @@ from database import (
 
 
 app = Flask(__name__)
-app.secret_key = "founddesk-development-secret-key"
+app.secret_key = os.environ.get(
+    "FOUNDDESK_SECRET_KEY",
+    "founddesk-development-secret-key"
+)
 app.register_blueprint(auth)
 
 #Here are the functions for the web interface
