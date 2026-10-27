@@ -156,7 +156,7 @@ def add_user_route():
     return redirect(url_for("index"))
 
 #Function for deleting a user's item
-@app.route("/delete_user/<int:item_id>", methods=["GET"])
+@app.route("/delete_user/<int:item_id>", methods=["POST"])
 def delete_user_route(item_id):
     if "user_id" not in session:
         return redirect(url_for("auth.login"))

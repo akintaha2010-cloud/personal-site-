@@ -56,9 +56,9 @@ My Listings
         {{ item[5] or "No description" }}
     </p>
 
-    <a href="/delete_user/{{ item[0] }}">
-        Delete
-    </a>
+    <form action="/delete_user/{{ item[0] }}" method="POST">
+        <button type="submit">Delete</button>
+    </form>
 
 </div>
 

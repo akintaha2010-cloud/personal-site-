@@ -151,9 +151,9 @@ FoundDesk
 
     {% if session.get("user_id") == item[7] %}
 
-        <a href="/delete_user/{{ item[0] }}">
-            Delete
-        </a>
+        <form action="/delete_user/{{ item[0] }}" method="POST">
+            <button type="submit">Delete</button>
+        </form>
 
     {% endif %}
 
