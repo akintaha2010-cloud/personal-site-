@@ -144,6 +144,9 @@ def add_user_route():
     ):
         return "Please fill in all required fields.", 400
 
+    if report_type not in ("Lost", "Found"):
+        return "Report type must be Lost or Found.", 400
+
     add_item(
         report_type,
         item_name,
