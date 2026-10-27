@@ -26,6 +26,15 @@ Then run:
 python main.py
 ```
 
+Set `FOUNDDESK_SECRET_KEY` to your own random value before sharing the app with others.
+
+## Run the tests
+
+```bash
+python -m pip install pytest
+python -m pytest
+```
+
 ## Built with
 
 - Python
